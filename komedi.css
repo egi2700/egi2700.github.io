@@ -1,0 +1,95 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+}
+
+.wrapper{
+    text-align: center;
+
+}
+
+.pemilu{
+    font-size: 100px;
+}
+
+.calon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.photo {
+    width: 600px;
+    height: 600px;
+    align-content: center;
+}
+
+.pasangan1 {
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+.pasangan2 {
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    display: block;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: yellow;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hidden {
+    top: 300px;
+    bottom: 300px;
+    left: 300px;
+    right: 300px;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    line-height: 600px;
+    color: white;
+    font-size: 40px;
+    display: none;
+}
+
+.visible {
+    top: 300px;
+    bottom: 300px;
+    left: 300px;
+    right: 300px;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    line-height: 600px;
+    color: white;
+    font-size: 40px;
+    display: block;
+}
+
+.animated-box {
+    position: absolute;
+    animation: move 5s infinite;
+    animation-play-state: paused;
+}
+
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(200px); }
+    100% { transform: translateX(0); }
+}
+
+/* https://bit.ly/47GpNES */

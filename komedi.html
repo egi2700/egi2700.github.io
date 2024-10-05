@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMILU 2045</title>
+    <link rel="stylesheet" href="komedi.css" />
+</head>
+<body>
+    <div class="content">
+        <div class="wrapper">
+            <div>
+                <h1 class="pemilu">PEMILIHAN KEPALA DAERAH KONOHA 2045</h1>
+                <div id="pop" class="hidden">
+                    <h1>ANDA SUDAH MEMILIH PASANGAN NOMOR 1 </h1>
+                </div>
+            </div>
+            <div class="calon">
+                <div class="pasangan1">
+                    <img src="/image/1.png" alt="pasangan 1" class="photo" />
+                    <button onclick="massage()">PILIH PASANGAN 1</button>
+                </div>
+                <div class="pasangan2">
+                    <img src="/image/2.jpg" alt="pasangan 2" class="photo" />
+                    <button class="animated-box"> PILIH PASANGAN 2</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const massage = ()=> {
+            const pop = document.getElementById('pop');
+            pop.classList.remove('hidden')
+            pop.classList.add('visible');
+        }
+
+        const animatedBox = document.querySelector('.animated-box');
+
+        // Fungsi untuk mengatur posisi acak
+        function setRandomPosition(element) {
+            const x = Math.floor(Math.random() * (window.innerWidth - element.clientWidth));
+            const y = Math.floor(Math.random() * (window.innerHeight - element.clientHeight));
+            element.style.left = `${x}px`;
+            element.style.top = `${y}px`;
+        }
+
+        // Mengatur animasi untuk berhenti dan berjalan saat di-hover
+        animatedBox.addEventListener('mouseover', () => {
+            setRandomPosition(animatedBox);
+            animatedBox.style.animationPlayState = 'running';
+        });
+
+        animatedBox.addEventListener('mouseout', () => {
+            animatedBox.style.animationPlayState = 'paused';
+        });
+    </script>
+</body>
+</html>
