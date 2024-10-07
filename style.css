@@ -9,3 +9,12 @@
 #footer{
     background-color: #0d6efd;
 }
+
+.kucing {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.gk {
+    transform: translateZ(50px);
+}

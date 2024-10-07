@@ -178,9 +178,33 @@
     </svg>
     <!-- project end -->
 
+    <!-- moodbooster -->
+
+    <div id="moodboooster">
+        <div class="container">
+            <div class="row pb-5">
+                <h1 class="text-center">My MoodBooster</h1>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-md-3 bg-primary text-center kucing" data-tilt data-tilt-scale="1.1">
+                    <h3 class="fw-bold pt-3 text-white">Garfield</h3>
+                    <img src="img/c1.png" alt="kucing oren" class="p-3 gk">
+                </div>
+                <div class="col-md-3 bg-primary text-center kucing" data-tilt data-tilt-scale="1.1">
+                    <h3 class="fw-bold pt-3 text-white">Gerry</h3>
+                    <img src="img/c2.png" alt="kucing oren2" class="p-3 gk" width="300px">
+                </div>
+                <div class="col-md-3 bg-primary text-center kucing" data-tilt data-tilt-scale="1.1">
+                    <h3 class="fw-bold pt-3 text-white">Jerry</h3>
+                    <img src="img/c3.png" alt="kucing oren3" class="p-3 gk" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- contact me -->
     <div id="contact">
-        <div class="container">
+        <div class="container pt-5">
             <h2 class="text-center">Contact Me</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8" data-aos="zoom-in" data-aos-delay="300">
@@ -236,6 +260,15 @@
     <script>
         AOS.init({
             duration: 2000,
+        });
+    </script>
+
+    <!-- vanila tilt-js -->
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".kucing"), {
+            max: 50,
+            speed: 1000
         });
     </script>
 </body>
